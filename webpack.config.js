@@ -8,10 +8,13 @@ module.exports = {
   entry: ["@babel/polyfill", "./src/index.jsx"],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[hash].js",
+    filename: "[name].[fullhash].js",
   },
   devServer: {
-    port: 3000,
+    port: 9000,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new HTMLWebpackPlugin({ template: "./src/index.html" }),

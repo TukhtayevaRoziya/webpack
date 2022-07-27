@@ -5,11 +5,11 @@ import { reposReducer } from "./reposReducer";
 import thunkMiddleware from "redux-thunk";
 import { configureStore } from "@reduxjs/toolkit";
 
-const rootReducers = configureStore({
+const rootReducers = {
   reducer: {
-    repos: reposReducer
+    repos: reposReducer,
   },
-});
+};
 
 const compoceEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
